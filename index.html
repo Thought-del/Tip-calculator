@@ -4,23 +4,108 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Meta tags for SEO -->
-  <title>Tip calculator | Frontend Mentor</title>
-  <meta name="description" content="A sleek, interactive tip calculator app called &laquo;SPLITTER&raquo; that lets you quickly calculate the tip and total per person based on the bill, tip percentage, and number of people. Features a modern, monospace design with clear visual states for empty, active, and completed calculations.">
-
-  <!-- Keywords -->
-  <meta name="keywords" content="tip calculator, bill splitter, tip per person, total per person, SPLITTER app, tip percentage calculator, bill sharing, monospace design, interactive calculator, financial tool, mobile and desktop design, Space Mono font, tip and total calculator">
-
-  <!-- Font -->
+  <title>Tip Calculator | SPLITTER - Frontend Mentor</title>
+  <meta name="description" content="A sleek, interactive tip calculator app called &laquo;SPLITTER&raquo; that lets you quickly calculate the tip and total per person based on the bill, tip percentage, and number of people.">
+  
+  <meta name="keywords" content="tip calculator, bill splitter, tip per person, total per person, SPLITTER app, tip percentage calculator">
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
-
-  <!-- Add CSS and JS files -->
+  
   <link rel="stylesheet" href="style.css">
   <script defer src="main.js"></script>
 </head>
 <body>
+  <!-- Hidden heading for screen readers -->
+  <h1 class="sr-only">SPLITTER Tip Calculator</h1>
   
+  <header class="header">
+    <img id="logo" src="images/logo.svg" alt="SPLITTER Tip Calculator" loading="lazy">
+  </header>
+  
+  <main class="container">
+    <form class="calculate-form" novalidate aria-label="Tip calculator form">
+      
+      <!-- Bill Input -->
+      <div class="input-group">
+        <label for="bill">Bill</label>
+        <input
+          id="bill"
+          type="number"
+          name="bill"
+          required
+          placeholder="0"
+          min="0"
+          step="0.01"
+          inputmode="decimal"
+          aria-required="true"
+          aria-label="Bill amount in dollars">
+      </div>
+      
+      <!-- Tip Selection -->
+      <fieldset class="tip-selection">
+        <legend>Select Tip %</legend>
+        <div class="tip-buttons" role="group" aria-label="Tip percentage options">
+          <button type="button" class="tip-btn" data-tip="5">5%</button>
+          <button type="button" class="tip-btn" data-tip="10">10%</button>
+          <button type="button" class="tip-btn" data-tip="15">15%</button>
+          <button type="button" class="tip-btn" data-tip="25">25%</button>
+          <button type="button" class="tip-btn" data-tip="50">50%</button>
+          <button type="button" class="tip-btn" id="custom-tip-btn">Custom</button>
+        </div>
+        <div class="custom-tip hidden">
+          <input
+            type="number"
+            id="custom-tip-input"
+            placeholder="Custom"
+            min="0"
+            max="100"
+            aria-label="Enter custom tip percentage">
+        </div>
+      </fieldset>
+      
+      <!-- Number of People -->
+      <div class="input-group">
+        <div class="label-wrapper">
+          <label for="people" id="people-label">Number of People</label>
+          <span class="error-message" aria-live="polite" id="people-error" hidden>Can't be zero</span>
+        </div>
+        <input
+          id="people"
+          type="number"
+          name="people"
+          required
+          placeholder="0"
+          min="1"
+          aria-required="true"
+          aria-describedby="people-error"
+          aria-invalid="false"
+          aria-label="Number of people sharing the bill">
+      </div>
+      
+      <!-- Results -->
+      <div class="calculate-results" aria-label="Calculation results">
+        <div class="result-item">
+          <div class="result-label">
+            <h3>Tip Amount</h3>
+            <p>/ person</p>
+          </div>
+          <p class="result-value" id="tip-amount" aria-live="polite">$0.00</p>
+        </div>
+        
+        <div class="result-item">
+          <div class="result-label">
+            <h3>Total</h3>
+            <p>/ person</p>
+          </div>
+          <p class="result-value" id="total-amount" aria-live="polite">$0.00</p>
+        </div>
+        
+        <button type="reset" class="reset-btn" disabled aria-label="Reset all values">RESET</button>
+      </div>
+      
+    </form>
+  </main>
 </body>
 </html>
