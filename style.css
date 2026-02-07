@@ -1,0 +1,90 @@
+:root {
+    /* ===== COLORS ===== */
+    --color-primary: hsl(172, 67%, 45%);
+    --color-secondary: hsl(183, 100%, 15%);
+    --color-white: hsl(0, 100%, 100%);
+
+    --color-text: hsl(186, 14%, 43%);
+    --color-text: hsl(184, 14%, 56%);
+    --color-text: hsl(185, 41%, 84%);
+    --color-text: hsl(189, 47%, 97%);
+
+    /* === 2. ТИПОГРАФИКА === */
+    --font-family-base: 'Segoe UI', Arial, sans-serif;
+    --font-family-heading: 'Segoe UI', Arial, sans-serif;
+    --font-family-mono: 'Courier New', monospace;
+    
+    --font-size-xs: 0.75rem;    /* 12px */
+    --font-size-sm: 0.875rem;   /* 14px */
+    --font-size-base: 1rem;     /* 16px */
+    --font-size-md: 1.125rem;   /* 18px */
+    --font-size-lg: 1.25rem;    /* 20px */
+    --font-size-xl: 1.5rem;     /* 24px */
+    --font-size-xxl: 2rem;      /* 32px */
+    
+    --font-weight-bold: 700;
+    
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.5;
+    --line-height-loose: 1.8;
+
+    /* === 3. ОТСТУПЫ И РАЗМЕРЫ === */
+    --space-0: 0;
+    --space-1: 0.25rem;   /* 4px */
+    --space-2: 0.5rem;    /* 8px */
+    --space-3: 0.75rem;   /* 12px */
+    --space-4: 1rem;      /* 16px */
+    --space-5: 1.5rem;    /* 24px */
+    --space-6: 2rem;      /* 32px */
+    --space-7: 3rem;      /* 48px */
+    --space-8: 4rem;      /* 64px */
+    
+    --border-radius-sm: 0.25rem;  /* 4px */
+    --border-radius-md: 0.5rem;   /* 8px */
+    --border-radius-lg: 1rem;     /* 16px */
+    --border-radius-xl: 1.5rem;   /* 24px */
+    --border-radius-full: 9999px; /* для кругов */
+    
+    /* === 4. ТЕНИ === */
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+    --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+    --shadow-xl: 0 20px 25px rgba(0,0,0,0.15);
+    
+    /* === 5. АНИМАЦИИ === */
+    --transition-fast: 150ms;
+    --transition-normal: 300ms;
+    --transition-slow: 500ms;
+    --transition-timing: ease-in-out;
+    
+    /* === 6. Z-INDEX (слои) === */
+    --z-index-dropdown: 1000;
+    --z-index-sticky: 1020;
+    --z-index-modal: 1050;
+    --z-index-popover: 1070;
+    --z-index-tooltip: 1080;
+    
+    /* === 8. КОНТЕЙНЕРЫ === */
+    --container-padding: var(--space-4);
+    --container-max-width: 1200px;
+    
+    /* === 9. КОМПОНЕНТЫ (примеры) === */
+    --button-padding: var(--space-2) var(--space-4);
+    --button-border-radius: var(--border-radius-md);
+    --input-padding: var(--space-2) var(--space-3);
+    --input-border-radius: var(--border-radius-sm);
+
+}
+
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-normal);
+    height: 100vh;
+}
