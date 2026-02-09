@@ -56,8 +56,8 @@
             <input
               type="number"
               id="custom-tip-input"
-              placeholder="Custom" 
-              min="0" max="100" 
+              min="0"
+              placeholder="Custom"
               aria-label="Enter custom tip percentage" />
           </div>
         </fieldset>
@@ -66,7 +66,7 @@
         <div class="input-group">
           <div class="label-wrapper">
             <label for="people" id="people-label">Number of People</label>
-            <span class="error-message" aria-live="polite" id="people-error" hidden>Can't be zero</span>
+            <span aria-live="polite" id="people-error" hidden>Can't be zero</span>
           </div>
           <input
             id="people"
@@ -74,7 +74,7 @@
             name="people"
             required
             placeholder="0"
-            min="1"
+            min="0"
             aria-required="true"
             aria-describedby="people-error"
             aria-invalid="false"
@@ -101,7 +101,7 @@
             <p class="result-value" id="total-amount" aria-live="polite">$0.00</p>
           </div>
           
-          <button type="reset" class="reset-btn" disabled aria-label="Reset all values">RESET</button>
+          <button type="reset" class="reset-btn" disabled aria-disabled="true" aria-label="Reset all values">RESET</button>
         </div>
       </section>
 
