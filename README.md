@@ -1,6 +1,3 @@
-**Professional README.md for "SPLITTER — Tip Calculator"**
-
-```markdown
 # 💰 SPLITTER — Tip Calculator
 
 ![SPLITTER Preview](images/preview.png)
@@ -26,6 +23,7 @@ A professional, accessible, and fully responsive tip calculator and bill splitte
 
 ### Key Architectural Decisions:
 
+```markdown
 1. **State Management**
 ```javascript
 const state = {
